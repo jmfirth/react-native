@@ -80,6 +80,7 @@ function createServer(options: StrictOptions) {
   // Some callsites may not be Flowified yet.
   invariant(options.reporter != null, 'createServer() requires reporter');
   const serverOptions = Object.assign({}, options);
+  serverOptions.sourceExts = serverOptions.sourceExts || ['js'];
   delete serverOptions.verbose;
   var Server = require('./src/Server');
   return new Server(serverOptions);

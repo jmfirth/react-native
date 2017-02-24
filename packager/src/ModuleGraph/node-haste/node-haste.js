@@ -87,6 +87,7 @@ exports.createResolveFn = function(options: ResolveOptions): ResolveFn {
         platform,
         platforms,
         preferNativePlatform: true,
+        sourceExts: [],
       });
     }
 
